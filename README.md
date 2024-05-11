@@ -53,6 +53,7 @@ REG NO:
 
 ## PROGRAM - RARP
 ## CLIENT
+```
 import socket 
 s=socket.socket() 
 s.bind(('localhost',9000)) 
@@ -65,8 +66,9 @@ while True:
                 c.send(address[ip].encode()) 
             except KeyError: 
                 c.send("Not Found".encode())
-
+```
 ## SERVER
+```
 import socket 
 s=socket.socket() 
 s.connect(('localhost',9000)) 
@@ -74,6 +76,7 @@ while True:
     ip=input("Enter MAC Address : ") 
     s.send(ip.encode()) 
     print("Logical Address",s.recv(1024).decode())
+```
 ## OUTPUT -RARP
 ## CLIENT
 ![image](https://github.com/mukitha24/2c.ARP_RARP_PROTOCOLS/assets/154068225/0897a424-9789-4d68-85e8-c110f0a0b9bf)
