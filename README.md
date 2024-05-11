@@ -18,7 +18,7 @@ stored.
 P
 ## PROGRAM - ARP
 ## CLIENT
-
+```
 import socket
 s=socket.socket()
 s.bind(('localhost',8000))
@@ -31,8 +31,9 @@ while True:
  c.send(address[ip].encode())
  except KeyError:
  c.send("Not Found".encode())
-
+```
  ## SERVER
+ ```
 import socket
 s=socket.socket()
 s.connect(('localhost',8000))
@@ -41,9 +42,9 @@ REG NO:
  ip=input("Enter logical Address : ")
  s.send(ip.encode())
  print("MAC Address",s.recv(1024).decode()
+```
 
-
-## OUPUT - ARP
+## OUTPUT - ARP
 ## CLIENT
 ![image](https://github.com/mukitha24/2c.ARP_RARP_PROTOCOLS/assets/154068225/bb82adbe-52ee-43c8-b769-f840a2bd86ad)
 
