@@ -41,7 +41,8 @@ REG NO:
  ip=input("Enter logical Address : ")
  s.send(ip.encode())
  print("MAC Address",s.recv(1024).decode()
- 
+
+
 ## OUPUT - ARP
 ## CLIENT
 ![image](https://github.com/mukitha24/2c.ARP_RARP_PROTOCOLS/assets/154068225/bb82adbe-52ee-43c8-b769-f840a2bd86ad)
